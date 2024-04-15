@@ -1,4 +1,4 @@
-﻿//----------------------------Task 1-------------------------------
+﻿﻿//----------------------------Task 1-------------------------------
 // var square1 = new Square(5,"green")
 // {
 // };
@@ -45,7 +45,8 @@ patient2.PrintPatient();
 patient3.PrintPatient();
 patient4.PrintPatient();
 
-patient1.AssignTreatment();
-patient2.AssignTreatment();
-patient3.AssignTreatment();
-patient4.AssignTreatment();
+patient1.AssignDoctor();
+patient2.AssignDoctor();
+patient3.AssignDoctor();
+patient4.AssignDoctor();
+

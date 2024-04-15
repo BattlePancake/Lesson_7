@@ -1,9 +1,9 @@
-﻿//----------------------------Task 1-------------------------------
+﻿﻿//----------------------------Task 1-------------------------------
 public class Square
 {
-    public int Length;
-    public int Sqr;
-    public string Color;
+    public int Length {get;set;}
+    public int Sqr {get;set;}
+    public string Color {get;set;}
 
     public Square(int length,string color)
     {

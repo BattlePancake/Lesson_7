@@ -1,9 +1,6 @@
-﻿public class Doctor
+﻿﻿public abstract class Doctor
 {
-    public virtual void Treat()
-    {
-        Console.WriteLine("Refferal to special Doctor");
-    }
+    public abstract void Treat();
 }
 public class Therapist: Doctor
 {
@@ -52,25 +49,33 @@ public class Patient
     {
         cure.Treat();
     }
+    
+    public void AssignDoctor()
+    {
+        if(TreatCode.Code == (int) Code.Surgeon)
+        {
+            PrintPatient();
+            ChooseDoctor(new Surgeon());
+        }
+        else if(TreatCode.Code == (int) Code.Dentist)
+        {
+            PrintPatient();
+            ChooseDoctor(new Dentist());
+        }
+        else
+        {
+            PrintPatient();
+            ChooseDoctor(new Therapist());
+        }
+    }
 
-    public void AssignTreatment()
+    enum Code: int
     {
-    if(TreatCode.Code == 1)
-    {
-        PrintPatient();
-        ChooseDoctor(new Surgeon());
+        Surgeon = 1,
+        Dentist,
+        Therapist
     }
-    else if(TreatCode.Code == 2)
-    {
-        PrintPatient();
-        ChooseDoctor(new Dentist());
-    }
-    else
-    {
-        PrintPatient();
-        ChooseDoctor(new Therapist());
-    }
-    }
+
 }
 public class TreatmentPlan
 {
